@@ -1,0 +1,5 @@
+key_name      = "my-key.pem"
+public_key    = "my-key.pem.pub"
+security_group_name = "allow_ssh"
+ami           = "ami-01b799c439fd5516a"
+instance_type = "t2.micro"
