@@ -1,0 +1,6 @@
+ami_id           = "ami-06c68f701d8090592"
+instance_type    = "t2.micro"
+key_name         = "my-terraform-key"
+private_key_path = "/home/mugdho/my-terraform-key.pem"
+instance_name    = "NginxServer"
+security_group_name = "allow_ssh_http"
