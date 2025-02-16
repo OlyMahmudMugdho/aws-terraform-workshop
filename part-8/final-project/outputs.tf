@@ -1,25 +1,15 @@
-output "instance_ids" {
-  description = "IDs of created EC2 instances"
-  value = {
-    WebServer1 = aws_instance.WebServer1.id
-    WebServer2 = aws_instance.WebServer2.id
-  }
+output "web_server1_public_ip" {
+  value = ""  # No public IP for private instances
 }
 
-output "public_ips" {
-  description = "Public IPs of the instances"
-  value = {
-    WebServer1 = aws_eip.public_ip1.public_ip
-    WebServer2 = aws_eip.public_ip2.public_ip
-  }
+output "web_server2_public_ip" {
+  value = ""  # No public IP for private instances
 }
 
-output "route_table_id" {
-  description = "ID of the main route table"
-  value       = aws_route_table.AppRouteTable.id
+output "rds_endpoint" {
+  value = aws_db_instance.rds_instance.endpoint
 }
 
-output "database_endpoint" {
-  description = "Database connection endpoint"
-  value       = aws_db_instance.app_database.endpoint
+output "load_balancer_dns_name" {
+  value = aws_lb.application_load_balancer.dns_name
 }
