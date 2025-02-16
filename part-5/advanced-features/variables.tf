@@ -4,6 +4,14 @@ variable "ami_id" {
   default     = "ami-06c68f701d8090592"
 }
 
+variable "access_key" {
+  description = "AWS access"
+}
+
+variable "secret_key" {
+  description = "AWS secret"
+}
+
 variable "instance_type" {
   description = "Instance type for EC2"
   type        = string
